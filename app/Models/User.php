@@ -22,8 +22,8 @@ class User extends Authenticatable
 		'password',
 	];
 
-	// public function classRoom()
-	// {
-	// 	return $this->belongsTo('App\Models\ClassRoom','class_id','id');
-	// }
+    public function comments()
+    {
+        return $this->hasMany('App\Models\Comment', 'user_id', 'id');
+    }
 }

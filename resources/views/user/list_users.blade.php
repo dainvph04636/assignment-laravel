@@ -1,9 +1,10 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 @extends('user.master')
 
 @section('title', 'Quan ly Users')
-
+@section('tieude', 'Quản lý User')
 @section('content')
-<a href="">Thêm User</a>
+<a href="{{route('users.add')}}">Thêm User</a>
 <table border='1' class='table'>
 	<thead>
 		<th>ID</th>
@@ -24,18 +25,21 @@
 			<td>{{$user->email}}</td>
 			<td>{{$user->address}}</td>
 			<td>
-				<a href="">Update</a>
-				<a href="#">
-				</a>
+				<a href="{{route('users.edit',$user->id)}}">Edit</a> &nbsp
+				<a class="delete" href="{{route('users.delete', $user->id)}}">Delete</a>
 			</td>
 		</tr>
 		@endforeach
 	</tbody>
 </table>
-
+<script>
+    $(".delete").on("click", function(){
+        return confirm("Bạn có muốn xóa không ?");
+    });
+</script>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -49,9 +53,9 @@
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Delete</button>
+				<button type="submit" class="btn btn-primary" >Delete</button>
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 @endsection
