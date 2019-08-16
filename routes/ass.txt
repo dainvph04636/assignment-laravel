@@ -1,0 +1,104 @@
+Assignment 1 - Deadline 13/08 - Gồm các phần 1 -> 7.
+
+Assignment 2 - Ngày thi 17/08 - Gồm các phần 8, 9, 10(Quản lý chi tiết các đối tượng) 
+
+
+Làm project framework laravel Sử dụng xampp Yêu cầu: làm trang web quản lý cửa hàng điện thoại
+
+1. Thực hiện thêm sửa xoá với 4 bảng products, categories, users, comments
+
+2. Migrations, seeder, model đầy đủ
+
+3. Các bảng liên quan có đầy đủ relations
+
+4. Sử dụng route group, name
+
+5. Có layout cho từng phần giao diện
+
+6. Mỗi chức năng người dùng gửi dữ liệu lên đều phải validate và có message tiếng việt.
+
+7. Chức năng xoá cần confirm
+
+8. Có chức năng đăng ký, đăng nhập, đăng xuất sử dụng bảng users(có thể dùng bảng có sẵn)
+
+9. Xác thực người dùng nếu không đăng nhập thì không thực hiện được quản lý
+
+10. Cụ thể
+
+* Users: Thêm sửa xoá, chi tiết user, đăng ký, đăng nhập, đăng xuất
+
+* Products: thêm sửa xoá, chi tiết sản phẩm, comment, lưu ý product phải thuộc 1 hoặc nhiều categories
+
+* Categories: thêm sửa xoá, chi tiết, lưu ý category có thể có category cha
+
+* Comments: nằm trong phần quản lý chi tiết sản phẩm, thêm sửa xoá, lưu ý product sẽ có 0 hoặc nhiều comment, comment phải do một user tạo.
+
+users
+
+- PK:id
+
+- first_name
+
+- last_name
+
+- email
+
+- password
+
+- address
+
+- birthday
+
+- is_active
+
+- created_at
+
+- updated_at
+
+products
+
+- PK: id
+
+- name
+
+- category_id
+
+- description
+
+- price
+
+- sale_percent
+
+- stocks
+
+- is_active
+
+- created_at
+
+- updated_at
+
+categories
+
+- PK: id
+
+- name
+
+- parent_id
+
+- created_at
+
+- updated_at
+
+comments
+
+- PK: id
+
+- user_id
+
+- product_id
+
+- content
+
+- created_at
+
+- updated_at
