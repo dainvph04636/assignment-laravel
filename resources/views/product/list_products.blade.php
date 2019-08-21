@@ -10,6 +10,7 @@
 		<th>ID</th>
 		<th>Name</th>
 		<th>Description</th>
+		<th>Image</th>
 		<th>Price</th>
 		<th>Sale Percent</th>
 		<th>Stocks</th>
@@ -22,6 +23,7 @@
 			<td>{{$product->id}}</td>
 			<td><a href="{{route('products.detail', $product->id)}}">{{$product->name}}</a></td>
 			<td>{{$product->description}}</td>
+			<td><img width="50px" height="50px" src="{{$product->image}}"></td>
 			<td>{{$product->price}}</td>
 			<td>{{$product->sale_percent}}</td>
 			<td>{{$product->stocks}}</td>

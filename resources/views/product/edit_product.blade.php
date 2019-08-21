@@ -26,6 +26,10 @@
         <input class="form-control" type="text" id="description" name="description" value="{{$product->description}}">
     </div>
     <div class="form-group">
+        <label for="image">Image</label>
+        <input class="form-control" type="text" id="image" name="image" value="{{$product->image}}">
+    </div>
+    <div class="form-group">
         <label for="price">Price</label>
         <input class="form-control" type="text" id="price" name="price" value="{{$product->price}}">
     </div>

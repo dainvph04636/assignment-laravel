@@ -15,9 +15,9 @@ class CommentController extends Controller
     {   
         $users = User::all();
         $products = Product::all();
-        $coments = Comment::all();
-        $coments = $coments->load('product');
-        $coments = $coments->load('user');
+        $comments = Comment::all();
+        $comments = $comments->load('product');
+        $comments = $comments->load('user');
 
         return view('product.detail_product',['products' => $products],['users' => $users]);
     }
@@ -36,7 +36,8 @@ class CommentController extends Controller
     function load()
 	{
         $comments = Comment::all();
-		// $comments = $comments->load('products');
+        $comments = $comments->load('product');
+        $comments = $comments->load('user');
         // dd($comments->toArray());
 		return view('comment.list_comments',['comments' => $comments]);
     }

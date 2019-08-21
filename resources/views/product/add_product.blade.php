@@ -24,6 +24,10 @@
 		<input class="form-control" type="text" id="description" name="description">
 	</div>
 	<div class="form-group">
+		<label for="image">Image</label>
+		<input class="form-control" type="text" id="image" name="image">
+	</div>
+	<div class="form-group">
 		<label for="price">Price</label>
 		<input class="form-control" type="text" id="price" name="price">
 	</div>

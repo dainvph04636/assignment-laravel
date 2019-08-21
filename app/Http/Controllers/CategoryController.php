@@ -48,11 +48,13 @@ class CategoryController extends Controller
 		return $this->index();
     }
     
-    public function delete(Category $category) {
+    public function delete(Category $category, Product $product) {
         // 1. class la the hien cua doi tuong ClassRoom
         // co id la class truyen vao route
         // su dung phuong thuc delete()
+        // $category_id = $category->id;
         $category->delete();
+        // $product->delete($category_id);
         // 2. Tra ve view
         return $this->index();
 	}

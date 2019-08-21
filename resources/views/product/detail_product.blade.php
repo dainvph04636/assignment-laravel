@@ -48,7 +48,7 @@
 
 <div class="comments-list">
     <div class="media">
-        <p class="pull-right"><small>5 days ago</small></p>
+        <p class="pull-right"><small>1 minute ago</small></p>
         <a class="media-left" href="#">
             <img width="40" height="40" src="{{asset('img/user-icon.svg')}}">
         </a>

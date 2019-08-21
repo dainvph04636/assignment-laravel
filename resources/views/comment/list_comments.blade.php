@@ -7,7 +7,9 @@
 <table border='1' class='table'>
     <thead>
         <th>ID</th>
-        <th>Comments</th>
+        <th>Comments content</th>
+        <th>Product</th>
+        <th>User</th>
         <th>Actions</th>
     </thead>
     <tbody>
@@ -15,6 +17,8 @@
         <tr>
             <td>{{$comment->id}}</td>
             <td>{{$comment->content}}</td>
+            <td>{{$comment->product->name}}</td>
+            <td>{{$comment->user->email}}</td>
             <td>
                 <a class="delete" href="{{route('comments.delete', $comment->id)}}">Delete</a>
             </td>

@@ -62,7 +62,7 @@ class UserController extends Controller
     	//3. Kiem tra neu tra ve true la dang nhap thanh cong
     	// dd(2313);
 		if ($checkLogin) {
-			return redirect()->route('users.master');
+			return redirect()->route('home.logged');
 		}else{
 			return redirect()->route('users.getLogin');
 		}
