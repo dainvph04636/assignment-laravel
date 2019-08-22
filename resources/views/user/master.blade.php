@@ -7,7 +7,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Hello-Laravel - @yield('title')</title>
+  <title>Laravel - @yield('title')</title>
+
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="{{ asset('bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
@@ -63,7 +64,7 @@ desired effect
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="{{route('users.master')}}" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
@@ -275,8 +276,11 @@ desired effect
         <li class="active"><a href="{{route('comments.list')}}">
           <i class="fa fa-link"></i> <span>Quản lý comments</span></a>
         </li>
+        <li class="active"><a href="{{route('home.list')}}">
+          <i class="fa fa-link"></i> <span>Về trang chủ</span></a>
+        </li>
 
-        <li class="treeview">
+        <!-- <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
@@ -285,7 +289,7 @@ desired effect
           <ul class="treeview-menu">
             <li><a href="#">Link in level 2</a></li>
           </ul>
-        </li>
+        </li> -->
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -394,6 +398,7 @@ desired effect
 
             <p>
               Some information about this general settings option
+          
             </p>
           </div>
           <!-- /.form-group -->

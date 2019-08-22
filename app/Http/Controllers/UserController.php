@@ -20,12 +20,12 @@ class UserController extends Controller
 	// 	// Đặt middleware ở trong này để lúc nào cũng đc check đầu tiên
 	// 	$this -> middleware('auth');
 	// }
-
+	
 	function index()
 	{
 		return view('user.master');
 	}
-
+	
 	public function list()
 	{
 		$users = User::all();
@@ -62,7 +62,7 @@ class UserController extends Controller
     	//3. Kiem tra neu tra ve true la dang nhap thanh cong
     	// dd(2313);
 		if ($checkLogin) {
-			return redirect()->route('home.logged');
+			return redirect()->route('home.list');
 		}else{
 			return redirect()->route('users.getLogin');
 		}

@@ -20,8 +20,10 @@ Route::group(
     ['home', 'as' => 'home.'],
     function () {
         Route::get('/', 'HomeController@index')->name('list');
-        Route::get('/logged', 'HomeController@index2')->name('logged')->middleware('auth');
+        // Route::get('/logged', 'HomeController@index2')->name('logged')->middleware('auth');
         Route::get('{product}/detail', 'HomeController@detail')->name('detail');
+        Route::post('create-post', 'HomeController@create')->name('create-post')->middleware('auth');
+
     }
 );
 

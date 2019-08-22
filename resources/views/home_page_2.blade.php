@@ -10,6 +10,12 @@
 
 <a href="{{route('users.master')}}">Admin</a>
 <a href="{{route('users.logout')}}">Logout</a>
+
+@if(isset($user->idc))
+<p>da dang nhap</p>
+@else
+<a href="{{route('home.logged')}}">Login</a>
+@endif
 <div class="container">
     <h3 class="h3">LARAVEL</h3>
     <div class="row">

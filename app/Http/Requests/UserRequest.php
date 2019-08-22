@@ -27,7 +27,7 @@ class UserRequest extends FormRequest
         return [
             'first_name' => 'required|string|min:2',
             'last_name' => 'required|string|min:2',
-            'email' => 'required|email',
+            'email' => 'required|email|unique:users',
             'password' => 'required|min:6|max:32',
             'birthday' => 'required',
             'is_active' => 'nullable|numeric',
@@ -48,6 +48,7 @@ class UserRequest extends FormRequest
 
             'email.required' => 'Yêu cầu nhập email',
             'email.email' => 'Nhập đúng định dạng email',
+            'email.unique' => 'Email đã được sử dụng',
 
             'password.required' => 'Yêu cầu nhập mat khau',
             'password.min' => 'Mật khẩu tối thiểu phải 6 ký tự',

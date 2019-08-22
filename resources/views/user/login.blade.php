@@ -33,7 +33,9 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <!-- <a href="../../index2.html"><b>Admin</b>LTE</a> -->
+  <a href=""><b>Admin</b>LTE</a><br>
+  <a href="{{route('home.list')}}">Quay lại trang chủ -></a>
+    
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">

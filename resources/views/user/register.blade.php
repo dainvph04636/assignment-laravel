@@ -33,10 +33,11 @@
 <body class="hold-transition register-page">
 <div class="register-box">
   <div class="register-logo">
-    <a href="../../index2.html"><b>Admin</b>LTE</a>
+    <a href=""><b>Admin</b>LTE</a><br>
+    <a href="{{route('home.list')}}">Quay lại trang chủ -></a>
   </div>
 
-  <div class="register-box-body">
+  <div class="register-box-body" style="height: 400px;">
     <p class="login-box-msg">Register a new membership</p>
 
     @section('content')
